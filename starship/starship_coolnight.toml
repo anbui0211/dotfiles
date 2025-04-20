@@ -1,0 +1,75 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs\
+$golang\
+$rust\
+$docker_context\
+$time\
+$line_break\
+$character"""
+
+add_newline = true
+
+[fill]
+symbol = " "
+
+[directory]
+style = "fg:#82AAFF"
+read_only = " "
+truncation_length = 3
+truncate_to_repo = false
+format = "[$path]($style) "
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+[git_branch]
+symbol = " "
+style = "fg:#C792EA"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "fg:#89DDFF"
+format = "[$all_status$ahead_behind]($style) "
+
+[character]
+success_symbol = "[❯](fg:#82AAFF)"
+error_symbol = "[❯](fg:#FF5370)"
+vicmd_symbol = "[❮](fg:#C3E88D)"
+
+[nodejs]
+symbol = " "
+style = "fg:#8BD5FF"
+format = "[$symbol($version )]($style)"
+
+[golang]
+symbol = " "
+style = "fg:#89DDFF"
+format = "[$symbol($version )]($style)"
+
+[rust]
+symbol = " "
+style = "fg:#FFCB6B"
+format = "[$symbol($version )]($style)"
+
+[docker_context]
+symbol = " "
+style = "fg:#61AFEF"
+format = "[$symbol $context]($style) "
+
+[time]
+disabled = false
+style = "fg:#C3E88D"
+time_format = "%H:%M"
+format = "[$time]($style)"
+
+[cmd_duration]
+min_time = 1000
+style = "fg:#FFCB6B"
+format = "[⏱ $duration]($style)"
