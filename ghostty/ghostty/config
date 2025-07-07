@@ -1,0 +1,12 @@
+theme = dark:cyberdream,light:cyberdream-light
+background-blur = 35
+background-opacity = 0.8
+macos-titlebar-style = tabs
+auto-update-channel = tip
+keybind = super+alt+shift+j=write_scrollback_file:open
+keybind = super+j=write_scrollback_file:open
+keybind = super+s>r=reload_config
+
+keybind = shift+enter=text:\n
+
+custom-shader = shaders/cursor_smear.glsl
